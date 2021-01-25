@@ -36,3 +36,5 @@ They can be added easily and configured.
 - Belt, GT2
 - Pulley, 20-Tooth
 
+# Wiring 
+![alt text](wiring.png)
