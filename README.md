@@ -1,6 +1,11 @@
 # arduino-stepper-timing
 Smooth sequence control logic for stepper motors 
 
+## Wiring 
+![alt text](wiring.png)
+
+## Descriptions
+
 The code is for a light duty parts feeder project.
 
 The system includes a 300 LPI linear optical encoder and film for incremental quadrature (4X) feedback precision and a remote status LED with momentary push button switch. 
@@ -15,7 +20,7 @@ The final stage returns the parts carriage to 0 to repeat the sequence.
 
 Status transition and control logic is implemented using FBD and FSM pattern. 
 
-# Stages
+## Sequences
 - Stage 1: 0 to 2” travel (motor count = 600;)
 - Stage 2: 2” to 24” travel (motor count = 7200;)
 - Stage 3: 24” to 48” travel (motor count = 14488;)
@@ -25,7 +30,7 @@ Status transition and control logic is implemented using FBD and FSM pattern.
 
 They can be added easily and configured. 
 
-# Parts
+## Parts
 - Arduino Uno
 - Stepper Motor, NEMA23, 425oz/in, 1.4A/Series
 - Motor Driver H-Bridge, L298N
@@ -35,6 +40,3 @@ They can be added easily and configured.
 - Encoder Film, 300 LPI
 - Belt, GT2
 - Pulley, 20-Tooth
-
-# Wiring 
-![alt text](wiring.png)
