@@ -1,15 +1,4 @@
-/* Created By Yang */
-/*
-||
-|| @file 	FBD.h
-|| @version	2.0
-|| @author	Yang 
-|| @contact	2435575291@qq.com
-||
-|| @description
-|| Definitions of Function Blocks
-||
-*/
+
 
 #ifndef FBD_H_
 #define FBD_H_
@@ -18,39 +7,31 @@
 
 typedef struct
 {
-    unsigned IN: 1; // IN option
-    unsigned PRE: 1; // IN option
-    unsigned Q: 1; // Output
+    unsigned IN : 1;  // IN option
+    unsigned PRE : 1; // IN option
+    unsigned Q : 1;   // Output
     unsigned long PT; // Set Timeout
     unsigned long ET; // Elapsed time
-}TON;
+} TON;
 
 typedef struct
 {
-	unsigned IN : 1; // IN option
-	unsigned PRE : 1; // IN option
-	unsigned Q : 1; // Output
-	unsigned long PT; // Set Timeout
-	unsigned long ET; // Elapsed time
-}TOF;
-
-typedef struct 
-{
-	unsigned EN : 1; // Enable option
-	unsigned IN: 1; // IN option
-    unsigned PRE: 1; // PRE option
-    unsigned Q: 1; // Output
+    unsigned IN : 1;  // IN option
+    unsigned PRE : 1; // IN option
+    unsigned Q : 1;   // Output
     unsigned long PT; // Set Timeout
     unsigned long ET; // Elapsed time
-}TP;
+} TOF;
 
-typedef struct 
+typedef struct
 {
-    unsigned IN : 1;
-    unsigned PRE : 1;
-    unsigned Q : 1;
-    unsigned : 5;
-}Rtrg;
+    unsigned EN : 1;  // Enable option
+    unsigned IN : 1;  // IN option
+    unsigned PRE : 1; // PRE option
+    unsigned Q : 1;   // Output
+    unsigned long PT; // Set Timeout
+    unsigned long ET; // Elapsed time
+} TP;
 
 typedef struct
 {
@@ -58,8 +39,15 @@ typedef struct
     unsigned PRE : 1;
     unsigned Q : 1;
     unsigned : 5;
-}Ftrg;
+} Rtrg;
 
+typedef struct
+{
+    unsigned IN : 1;
+    unsigned PRE : 1;
+    unsigned Q : 1;
+    unsigned : 5;
+} Ftrg;
 
 void TONFunc(TON *pTP);
 void TPFunc(TP *pTP);
@@ -67,4 +55,4 @@ void RTrgFunc(Rtrg *pTrg);
 void FTrgFunc(Ftrg *pTrg);
 void TOFFunc(TOF *pTP);
 
-#endif 
+#endif
